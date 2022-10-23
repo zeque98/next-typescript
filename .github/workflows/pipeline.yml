@@ -6,16 +6,31 @@ on:
       - main
 
 jobs:
+  # Que es deploy?
   deploy:
     runs-on: ubuntu-18.04
+
+    # Get my repository
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
+      # Install Node version
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+
+      # Install dependencies
       - name: Install dependencies
-        run: yarn
+        run: yarn --no-audit --no-fund --no-optional
+
+      # Run lint
       - name: Lint
         run: yarn lint
+
+      - name: Build
+        run: yarn build
+
+      - name: Test
+        run: yarn test
