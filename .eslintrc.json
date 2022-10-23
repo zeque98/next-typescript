@@ -1,3 +1,93 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "extends": [
+    "prettier",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".tsx", ".jsx"]
+      }
+    ],
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/order": [
+      "error",
+      {
+        "groups": [["builtin", "external"], "internal", ["sibling", "parent", "index"]],
+        "newlines-between": "always"
+      }
+    ],
+    "import/extensions": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true
+      }
+    ],
+    "no-return-await": "error",
+    "eqeqeq": "error",
+    "no-unneeded-ternary": "error",
+    "no-console": 1,
+    "import/prefer-default-export": 0,
+    "react/prop-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      {
+        "multiline": {
+          "delimiter": "none"
+        },
+        "singleline": {
+          "delimiter": "comma"
+        }
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-non-null-assertion": 0,
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/no-multi-comp": ["error", { "ignoreStateless": false }],
+    "react/jsx-sort-props": [
+      "error",
+      {
+          "callbacksLast": true,
+          "shorthandFirst": false,
+          "shorthandLast": true,
+          "ignoreCase": true,
+          "noSortAlphabetically": false
+      }
+    ],
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": false,
+        "minKeys": 2
+      }
+    ]
+  }
 }
