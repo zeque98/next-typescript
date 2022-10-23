@@ -1,5 +1,3 @@
-// __tests__/index.test.jsx
-
 import { render, screen } from '@testing-library/react';
 
 import Home from '../pages/index';
