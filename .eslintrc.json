@@ -25,8 +25,6 @@
     "testing-library"
   ],
   "ignorePatterns": [
-    "jest.config.ts",
-    "jest.setup.ts",
     "next.config.js"
   ],
   "overrides": [
