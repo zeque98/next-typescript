@@ -36,7 +36,6 @@ jobs:
         run: yarn test
 
       - name: End-to-end tests
-        run: yarn cy:run
         uses: cypress-io/github-action@v4
         with:
           command: yarn cy:run
