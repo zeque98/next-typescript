@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: yarn --no-audit --no-fund --no-optional
 
-      # Run lint
+      # Run lint (no required)
       - name: Lint
         run: yarn lint
 
@@ -34,3 +34,11 @@ jobs:
 
       - name: Test
         run: yarn test
+
+      - name: E2E
+        run: End-to-end tests
+        uses: cypress-io/github-action@v4
+        with:
+          command: yarn cy:run
+          start: yarn start
+          wait-on: http://localhost:3000
