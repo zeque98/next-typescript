@@ -23,7 +23,7 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: yarn --no-audit --no-fund --no-optional
+        run: yarn install --frozen-lockfile
 
       # Run lint (no required)
       - name: Lint
