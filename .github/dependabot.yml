@@ -9,3 +9,10 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+
+    open-pull-request-limit: 10
+    target-branch: "master"
+    assignees:
+      - zequee98
+    reviewers:
+      - zequee98
