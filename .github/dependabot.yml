@@ -11,8 +11,16 @@ updates:
       interval: "daily"
 
     open-pull-requests-limit: 10
-    target-branch: "master"
+    target-branch: "develop"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+
+    open-pull-requests-limit: 10
+    target-branch: "main"
     assignees:
-      - zequee98
+      - zeque98
     reviewers:
-      - zequee98
+      - zeque98
